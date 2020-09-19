@@ -29,9 +29,7 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
  
-    if(command === 'info'){
-        client.commands.get('info').execute(message, args);
-    } else if (command === ''){
+    if(command === ''){
         client.commands.get('').execute(message, args);
     }else if (command === 'help'){
         client.commands.get('help').execute(message, args);
