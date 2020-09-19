@@ -43,6 +43,8 @@ client.on('message', message =>{
         client.commands.get('help-admin').execute(message, args);
     } else if (command === 'default'){
         client.commands.get('default').execute(message, args);
+    }  else if (command === 'ping'){
+        client.commands.get('ping').execute(message, args);
     }
 });
 
