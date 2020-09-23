@@ -18,7 +18,7 @@ for(const file of commandFiles){
 client.on('ready', () => {
     console.log("Ready")
 
-    client.user.setPresence({ activity: { name: `--help | ${(client.guilds.cache.size)} servers` }, status: 'dnd' })
+    client.user.setPresence({ activity: { name: `--help | ${(client.guilds.cache.size)} servers`, type: `WATCHING` }, status: 'dnd' })
   .then(console.log)
   .catch(console.error);
 });
