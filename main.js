@@ -17,11 +17,15 @@ for(const file of commandFiles){
 
 client.on('ready', () => {
     console.log("Ready")
-
-    client.user.setPresence({ activity: { name: `--help | ${(client.guilds.cache.size)} servers`, type: `WATCHING` }, status: 'dnd' })
-  .then(console.log)
-  .catch(console.error);
+        client.user.setPresence({ activity: { name: `${(client.users.cache.size)} users across ${(client.guilds.cache.size)} servers`, type: `WATCHING` }, status: 'dnd' })
+        .then(console.log)
+        .catch(console.error);
 });
+
+// Update bot status once an hour
+setInterval(() => {
+    client.user.setPresence({ activity: { name: `${(client.users.cache.size)} users in ${(client.guilds.cache.size)} servers`, type: `WATCHING` }, status: 'dnd' })
+}, 9999);
 
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
