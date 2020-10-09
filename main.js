@@ -22,11 +22,6 @@ client.on('ready', () => {
         .catch(console.error);
 });
 
-// Update bot status once an hour
-setInterval(() => {
-    client.user.setPresence({ activity: { name: `${(client.users.cache.size)} users in ${(client.guilds.cache.size)} servers`, type: `WATCHING` }, status: 'dnd' })
-}, 9999);
-
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
  
@@ -43,9 +38,7 @@ client.on('message', message =>{
         client.commands.get('muter').execute(message, args);
     } else if (command === 'help-admin'){
         client.commands.get('help-admin').execute(message, args);
-    } else if (command === 'default'){
-        client.commands.get('default').execute(message, args);
-    }  else if (command === 'ping'){
+    } else if (command === 'ping'){
         client.commands.get('ping').execute(message, args);
     }
 });
