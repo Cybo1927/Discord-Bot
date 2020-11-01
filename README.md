@@ -6,10 +6,6 @@
 
 ***Note: Blocked links can be viewed, the bot will create an embed which shows that a link was blocked and allows you to click-to-see the message that was deleted***
 
-# Get the bot:
-https://discord.com/oauth2/authorize?client_id=749813798918946856&scope=bot&permissions=8
-
-
 # Requirements for self-hosting:
 
 ### Install NodeJS and Discord.js:
