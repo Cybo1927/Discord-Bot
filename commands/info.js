@@ -3,7 +3,7 @@ module.exports = {
    execute(client, message, args){
        const Discord = require('discord.js');
 
-       let botVersion = '0.1.1'
+       let botVersion = '0.2.0'
 
        const infoEmbed = {
            color: 0x0099ff,
