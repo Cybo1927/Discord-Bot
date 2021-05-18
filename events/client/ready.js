@@ -1,8 +1,8 @@
 module.exports = (Discord, client) => {
     client.user.setPresence({
         activity: {
-            name: `--help | ${(client.users.cache.size)} user(s)`,
-            type: "WATCHING" 
+            name: `--help`,
+            type: "WATCHING"
         },
         status: 'online'
       })

@@ -1,5 +1,3 @@
-const { ClientUser, Client } = require("discord.js");
-
 module.exports = {
     name: 'muter',
     execute(client, message, args){
@@ -19,7 +17,7 @@ module.exports = {
         user.roles.remove(rolerem);
         user.roles.add(roleadd);
         message.channel.send(`Muted ${user} and removed the role "${(args[1])}"`);
-        
+
         }
     }
 }

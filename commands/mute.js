@@ -1,5 +1,3 @@
-const { ClientUser, Client } = require("discord.js");
-
 module.exports = {
     name: 'mute',
     execute(client, message, args){
