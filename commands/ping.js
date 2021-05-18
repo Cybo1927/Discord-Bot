@@ -1,6 +1,5 @@
 module.exports = {
     name: 'ping',
-    description: "API ping",
     execute(client, message, args){
         const Discord = require('discord.js');
 
@@ -9,9 +8,8 @@ const pingEmbed = {
             title: 'Ping:',
             description: `***API ping:***   ${(message.client.ws.ping)}ms`,
         };
-        
+
         message.channel.send({ embed: pingEmbed });
-    
 
     }
 }
