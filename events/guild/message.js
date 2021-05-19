@@ -12,8 +12,8 @@ module.exports = (Discord, client, message) => {
         .setColor('#e30f0f')
         .setTitle('IP Grabber Blocked:')
         .addFields(
-          { name: 'Sender:', value: message.author, inline: true },
-          { name: 'Content:', value: '||  ' + message.content + '  ||', inline: true },
+          { name: 'Sender:', value: message.author },
+          { name: 'Content:', value: '||  ' + message.content + '  ||' },
         )
         .setTimestamp()
         message.channel.send({ embed: ipEmbed });

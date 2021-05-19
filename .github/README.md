@@ -19,3 +19,9 @@ Guide - https://discordjs.guide/preparations/
 * In the bot's directory create a file called .env
 * Open .env in your favorite text/code editor
 * Add the line `TOKEN = YOUR_TOKEN` and replace "YOUR_TOKEN" with your bot's specific token (this allows the bot to run)
+
+### To run:
+* Open the bot's directory
+* Open a new terminal/command prompt in the directory
+* Type `node .`
+* Press enter
