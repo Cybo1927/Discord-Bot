@@ -3,7 +3,7 @@
 * Mute command to mute misbehaving users
 * Muter command to mute misbehaving mods/admins (by removing a specified role)
 
-***Note: Blocked links can be viewed, the bot will create an embed which shows that a link was blocked and allows you to click-to-see the message that was deleted***
+***Note: Blocked links can be viewed, the bot will create an embed which allows you to see the message that was deleted***
 
 # Requirements for self-hosting:
 
@@ -25,3 +25,6 @@ Guide - https://discordjs.guide/preparations/
 * Open a new terminal/command prompt in the directory
 * Type `node .`
 * Press enter
+
+### Privacy:
+Click [here](https://github.com/Cybo1927/Discord-Bot/blob/master/.github/privacy.md) to read the privacy policy of this bot.
