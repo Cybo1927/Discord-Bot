@@ -18,16 +18,16 @@ module.exports = async (Discord, client, message) => {
         // Response time may seem slower as it depends on the end user's connection speeds
         .setFooter(`Response time: ~${Date.now() - message.createdTimestamp}ms`)
         message.channel.send({ embed: ipEmbed });
-        // Logging to make sure there's not somehow a false positive
-        // Also prevent this from showing up as a clickable link in Konsole by removing the http:// or https:// part
-        const lmsg = message.content.toLowerCase().split("://").pop();
-        console.log(`\nIP grabber blocked: ${lmsg}`)
-  }
-}
+      }
+    }
     const prefix = '--';
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
-    const command = client.commands.get(cmd);
-    if(command) command.execute(client, message, args, Discord);
+    const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
+    try{
+      command.execute(client, message, args, Discord);
+    }catch(err){
+      message.reply('It seems there was an error trying to execute this command!')
+    }
 }

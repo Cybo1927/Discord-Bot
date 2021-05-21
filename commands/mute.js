@@ -1,7 +1,6 @@
 module.exports = {
     name: 'mute',
-    execute(client, message, args){
-
+    async execute(client, message, args){
         if(message.channel.type === 'dm'){
               message.channel.send('You need to be in a server to use this command!')
           }else if(!message.mentions.members.first()){
@@ -13,7 +12,6 @@ module.exports = {
         let user = message.mentions.members.first();
         user.roles.add(roleadd);
         message.channel.send(`Muted ${user}`);
-
         }
     }
 }
