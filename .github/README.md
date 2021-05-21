@@ -2,6 +2,7 @@
 * Blocks 70+ IP grabbers
 * Mute command to mute misbehaving users
 * Muter command to mute misbehaving mods/admins (by removing a specified role)
+* Purge command to replace a channel with an exact copy while deleting all messages
 
 ***Note: Blocked links can be viewed, the bot will create an embed which allows you to see the message that was deleted***
 
